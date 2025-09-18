@@ -7,7 +7,7 @@
     <div class="mt-4 max-w-2xl mx-auto">
         @foreach ($photos as $photo)
             <div>
-                <h2 class="py-2 text-lg">
+                <h2 wire:bigger-text class="py-2 text-lg">
                     {{ $photo->title }}
                 </h2>
                 <p class="text-sm text-slate-500">
@@ -15,6 +15,12 @@
                 </p>
             </div>
         @endforeach
+
+    </div>
+
+
+    <div class="mt-8 max-w-4xl mx-auto">
+        {{ $photos->links() }}
     </div>
 
     <button @click="open = true">Expand</button>

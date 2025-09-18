@@ -10,7 +10,7 @@ class PhotoView extends Component
     public function render()
     {
         return view('livewire.photo-view', [
-            'photos' => Photo::query()->get()
+            'photos' => Photo::query()->paginate(10)
         ]);
     }
 }
