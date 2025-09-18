@@ -19,7 +19,7 @@ class PhotoFactory extends Factory
         return [
             'title' => $this->faker->sentence,
             'description' => implode(",", $this->faker->sentences(2)) ,
-            'image' => '/test/img.png'
+            'image' => 'https://placehold.co/640x480.png'
         ];
     }
 }

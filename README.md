@@ -1,5 +1,10 @@
 # Livewire practice
 
+## Installation
+`./vendor/bin/sail up && ./vendor/bin/sail artisan migrate:fresh --seed`
+
+--- 
+
 
 1. created fresh laravel app without livewire template
 
@@ -36,5 +41,6 @@
 # Livewire component testing
 
 - I did some basic feature tests using Pest framework. Livewire\Livewire already has static function called `test` to help with testing in livewire. I tested Nav component and Photo component.
+
 
 

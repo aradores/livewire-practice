@@ -4,9 +4,10 @@
 
     <livewire:nav />
 
-    <div class="mt-4 max-w-2xl mx-auto">
+    <div class="mt-4 max-w-2xl mx-auto space-y-4">
         @foreach ($photos as $photo)
-            <div>
+            <div class="border-b border-b-gray-400/20 pb-6">
+            <img src="{{ $photo->image }}" />
                 <h2 wire:bigger-text class="py-2 text-lg">
                     {{ $photo->title }}
                 </h2>
