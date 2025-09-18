@@ -4,7 +4,17 @@
 
     <livewire:nav />
 
-    <div class="mt-4 max-w-2xl mx-auto bg-red-500">
+    <div class="mt-4 max-w-2xl mx-auto">
+        @foreach ($photos as $photo)
+            <div>
+                <h2 class="py-2 text-lg">
+                    {{ $photo->title }}
+                </h2>
+                <p class="text-sm text-slate-500">
+                    {{ $photo->description }}
+                </p>
+            </div>
+        @endforeach
     </div>
 
     <button @click="open = true">Expand</button>
@@ -12,5 +22,4 @@
     <span class="text-red-500" x-show="open">
         Content...
     </span>
-    {{ $test }}
 </div>

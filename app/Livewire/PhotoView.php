@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Models\Photo;
 use Livewire\Component;
 
 class PhotoView extends Component
@@ -9,7 +10,7 @@ class PhotoView extends Component
     public function render()
     {
         return view('livewire.photo-view', [
-            'test' => 'adichan'
+            'photos' => Photo::query()->get()
         ]);
     }
 }
